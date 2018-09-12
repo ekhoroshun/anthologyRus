@@ -104,7 +104,7 @@ class Home extends Component {
                             
                             <div className="link_poem" onMouseEnter={this.hoverTextOn} onMouseLeave={this.hoverTextOff}>
                             <div onMouseEnter={this.HoverON} onMouseLeave={this.HoverOFF}>
-                            <Link className="link_design" to='/king'> the gray-eyed king</Link></div>
+                            <Link className="link_design" to='/king'> the grey-eyed king</Link></div>
                             </div>
                             
                             </div>

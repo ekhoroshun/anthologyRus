@@ -1,23 +1,44 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Velocity from 'velocity-animate';
+
+
 class Akhmatova extends Component {
-render(){
+
+    componentDidMount(){
+        var element = document.querySelector(".poem_page_loading");
+        Velocity(element, {"opacity": "1", "right": 0}, {"duration": 1000,  "easing": "ease-in-out"});
+    }
+    componentDidUnmount(){
+        var element = document.querySelector(".poem_page_loading");
+        Velocity(element, {"opacity": "0", "right": 20}, {"duration": 1000,  "easing": "ease-in-out"});
+    }
+
+    render(){
     return(
         <div className="container-fluid h-100"> 
-        <div className="row h-100">
+           
+            <div className="row poem_page_loading h-100">
 
-        <div className="col">
+            <div className="col first_col">
 
-        <div className="row link_holder">
-        <div className="col">
-         <Link to='/'> Retour </Link>
-        </div>
-        </div>
+           <div className="link_retour pt-5 pl-5">
+            <Link className="link_retour_design" to='/'> Retour </Link>
+            </div>
+            <div className="test">
+          <div className="author_name pb-5 pl-5"> 
+            <p className="author_p">author:</p>
+           <h2 className="author_name_design">Anna Akhmatova</h2>
+           </div>
+           </div>
+         </div>
+        
 
-        <div className="row align-item-center poem_text_holder">
        
-        <div class="col-md-6 col-md-offset-3 poem_holder_page">
+       
+        <div class="col second_col">
             <div className="poem_text">
+            <h2 className="poem_name"> Grey Eyed King </h2>
             <p>  Glory to you, inescapable pain!
                 The gray-eyed king died yesterday.
             </p>
@@ -47,18 +68,17 @@ render(){
             </p>
                 11 December 1910, Tsarskoe Selo
          </div>  
-         </div>
+         
          </div>
 
-         <div className="row author_poem_holder">
-         <div className="col">
-            <p>author:</p>
-           <h2>Anna Akhmatova</h2>
+        
+         <div className="col third_col">
+         <div className="arrows"> &#x3c; {"   "} &#x3e; </div>
          </div>
          </div>
-         </div>
+         
         </div>
-        </div>
+       
     )
 }
 }

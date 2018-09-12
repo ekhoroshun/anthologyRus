@@ -1,14 +1,67 @@
+
 .poem_text{
     font-family: 'Playfair Display', serif;
+    margin-top: 100px;
+    font-size: 15px;
 }
 
-.link_holder{
-height: 10%;
+.author_name{
+    position: absolute;
+    bottom: 0;
+    //border: 1px black solid;
 }
 
-.poem_text_holder{
-    height:60%;
+.author_p{
+    font-family: 'Kosugi', sans-serif;
+    margin: 0;
+    color: grey;
 }
-.author_poem_holder{
-    height:30%;
+.author_name_design{
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: 700;
+}
+.link_retour{
+    font-family: 'Kosugi', sans-serif;
+    
+}
+.link_retour_design{
+    color: black;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size: 20px;
+    &:hover{
+        color: grey;
+    }
+}
+.first_col{
+//border: 1px black solid;
+}
+.second_col{
+ //border: 1px black solid;
+}
+.third_col{
+    //border: 1px black solid;
+}
+
+.poem_name{
+    margin: 20px;
+    text-align: center;
+    font-family: 'Kosugi', sans-serif;
+    letter-spacing: -1px;
+    
+}
+
+.poem_page_loading{
+    right:20px;
+    opacity:0; 
+}
+
+.arrows{
+    text-align: center;
+    letter-spacing: 20px;
+    padding-top: 300px;
+    //z-index: 1;
+    font-size: 40px;
 }

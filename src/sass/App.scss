@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Kosugi');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700i');
+
+html, body {
+  	-webkit-font-smoothing: antialiased;
+    height: 100%;
+    
+}
+
+.site_name{
+  position:relative;
+  opacity:0;  
+  right:20px;
+
+}
+
+.menu_holder{
+  font-family: 'Kosugi', sans-serif;
+  position:relative;
+  right:20px;
+  opacity:0; 
+}
+.menu_holder_first{
+  margin-left: 20px;
+  font-size: 20px;
+    color: black;
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    transition: all 200ms linear;
+  &:hover{
+    color: grey;
+    text-decoration: none;
+}
+}
+.right_side{
+
+}
+
+.name_holder{
+height: 30%;
+font-family: 'Playfair Display', serif;
+font-style: italic;
+bottom: 50px;
+}
+.poem_holder{
+ height: 50%;
+ font-family: 'Playfair Display', serif;
+ position:relative;
+  right:20px;
+  opacity:0; 
+  margin-left: 20px;
+ 
+}
+.top_holder{
+  height: 20%;
+}
+
+.active-pink-2 input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #f48fb1;
+  box-shadow: 0 1px 0 0 #f48fb1;
+  border-radius: 0;
+  
+}
+
+.form-control{
+  border: none;
+  border-radius: 0;
+}
+
+.poem_holder_page{
+top: 70px;
+left: 70px;
+}
+
+.pic_here{
+  //width: 00px;  /* Or whatever */
+  height: 600px; /* Or whatever */
+  margin: auto;
+ }
+.pic_holder{
+  display: flex;
+  margin: 50px;
+  position:relative;
+  opacity:0;  
+  right:20px;
+}
+
+.link_design{
+  color: black;
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    transition: all 200ms linear;
+  &:hover{
+    text-decoration: none;
+    color: grey;
+}
+}
+.link_poem{
+    position:relative;
+    right:20px;
+    width: 140px;
+    
+}
+
+

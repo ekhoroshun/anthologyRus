@@ -36,7 +36,8 @@ html, body {
 }
 }
 .right_side{
-
+//right: 100px;
+//border: 1px black solid;
 }
 
 .name_holder{
@@ -76,13 +77,16 @@ left: 70px;
 }
 
 .pic_here{
-  //width: 00px;  /* Or whatever */
-  height: 600px; /* Or whatever */
+  
+  height: 650px; /* Or whatever */
   margin: auto;
+
  }
 .pic_holder{
+  padding-top: 30px;
+  padding-bottom: 30px;
   display: flex;
-  margin: 50px;
+  padding-right: 200px;
   position:relative;
   opacity:0;  
   right:20px;

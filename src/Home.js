@@ -101,14 +101,18 @@ class Home extends Component {
                             <div className="row poem_holder pl-5 align-items-center">
                             <div className="col-12">
 
-                            
+                           
                             <div className="link_poem" onMouseEnter={this.hoverTextOn} onMouseLeave={this.hoverTextOff}>
                             <div onMouseEnter={this.HoverON} onMouseLeave={this.HoverOFF}>
                             <Link className="link_design" to='/king'> the grey-eyed king</Link></div>
                             </div>
                             
                             </div>
+                            
                             </div>
+                            
+                            
+                            
                             <div className="row name_holder pl-5 align-items-center">
                             <div className="col-12">
                             <h2 className="site_name"> Anthology of Russian Poems </h2>

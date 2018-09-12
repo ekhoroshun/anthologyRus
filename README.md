@@ -1,3 +1,1 @@
-
-# vit-react
-Repository for the Vice Industry Portal.
+Using React JS, Bootstrap 4, Sass, and Velocity for animation.

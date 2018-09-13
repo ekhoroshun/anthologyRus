@@ -3,20 +3,33 @@ import { Link } from "react-router-dom";
 import Velocity from "velocity-animate";
 
 class Akhmatova extends Component {
+    
 	componentDidMount() {
-		var element = document.querySelector(".poem_page_loading");
+        var element5 = document.querySelector(".author_name");
 		Velocity(
-			element,
+			element5,
 			{ opacity: "1", right: 0 },
 			{ duration: 1000, easing: "ease-in-out" }
 		);
+		var element6 = document.querySelector(".poem_page_loading");
+		Velocity(
+			element6,
+			{ opacity: "1" },
+			{ duration: 2000, easing: "ease-in-out" }
+		);
 	}
 	componentDidUnmount() {
-		var element = document.querySelector(".poem_page_loading");
+        var element5 = document.querySelector(".author_name");
 		Velocity(
-			element,
+			element5,
 			{ opacity: "0", right: 20 },
-			{ duration: 1000, easing: "ease-in-out" }
+			{ duration: 100, easing: "ease-in-out" }
+		);
+		var element6 = document.querySelector(".poem_page_loading");
+		Velocity(
+			element6,
+			{ opacity: "0" },
+			{ duration: 100, easing: "ease-in-out" }
 		);
 	}
 
@@ -32,14 +45,16 @@ class Akhmatova extends Component {
 							</Link>
 						</div>
 						<div className="test">
-							<div className="author_name pb-5 pl-5">
+							<div className="author_name pb-5">
 								<p className="author_p">author:</p>
 								<h2 className="author_name_design">Anna Akhmatova</h2>
+                                <p className="author_p" > Tsarskoe Selo </p>
 							</div>
 						</div>
 					</div>
 
 					<div class="col second_col">
+                   
 						<div className="poem_text">
 							<h2 className="poem_name"> Grey Eyed King </h2>
 							<p>
@@ -71,12 +86,13 @@ class Akhmatova extends Component {
 								While outside the rustling poplars say: "Your king is no longer
 								upon this earth..."
 							</p>
-							11 December 1910, Tsarskoe Selo
+							
 						</div>
+                        <div className="date_poem"><p className="date_design">11 Dec 1910</p></div>
 					</div>
 
 					<div className="col third_col">
-						<div className="arrows"> &#x3c; {"   "} &#x3e; </div>
+						<div className="arrows"> &#x3c;  &#x3e; </div>
 					</div>
 				</div>
 			</div>

@@ -1,14 +1,14 @@
-
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
 .poem_text{
     font-family: 'Playfair Display', serif;
     margin-top: 100px;
     font-size: 15px;
+    position: relative;
 }
 
 .author_name{
     position: absolute;
     bottom: 0;
-    //border: 1px black solid;
 }
 
 .author_p{
@@ -54,8 +54,9 @@
 }
 
 .poem_page_loading{
-    right:20px;
-    opacity:0; 
+     right:20px;
+     opacity:0; 
+    
 }
 
 .arrows{
@@ -64,4 +65,25 @@
     padding-top: 300px;
     //z-index: 1;
     font-size: 40px;
+}
+
+.date_poem{
+    position: absolute;
+    z-index: 1;
+    top: 300px;
+    //bottom: 80px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+
+    
+}
+
+.date_design{
+    font-size: 70px;
+    opacity: 0.1;
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+    letter-spacing: 10px;
+    
 }

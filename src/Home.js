@@ -46,7 +46,7 @@ class Home extends Component {
 	hoverTextOff() {
 		this.setState({ hover1: false });
 		var element1 = document.querySelector(".link_poem");
-		Velocity(element1, { right: 20 }, { duration: 500, easing: "ease-in-out" });
+		Velocity(element1, { right: 20 }, { duration: 100, easing: "ease-in-out" });
 	}
 
 	componentDidMount() {
@@ -57,7 +57,7 @@ class Home extends Component {
 		Velocity(
 			element2,
 			{ opacity: "1", right: 0 },
-			{ duration: 500, easing: "ease-in-out" }
+			{ duration: 1000, easing: "ease-in-out" }
 		);
 		Velocity(
 			element3,

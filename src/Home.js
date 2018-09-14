@@ -3,30 +3,52 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Velocity from "velocity-animate";
 
+import king from "./images/king.jpg";
+
 class Home extends Component {
 	constructor(props) {
-		super(props);
+        super(props);
+        
 		this.HoverOFF = this.HoverOFF.bind(this);
 		this.HoverON = this.HoverON.bind(this);
 
 		this.hoverTextOff = this.hoverTextOff.bind(this);
-		this.hoverTextOn = this.hoverTextOn.bind(this);
+        this.hoverTextOn = this.hoverTextOn.bind(this);
+        
+        this.displayImage = this.displayImage.bind(this);
 
 		this.state = {
 			hover: false,
-			hover1: false
+            hover1: false,
+            image: ''
+           
 		};
-	}
+    }
 
-	HoverON() {
-		var element = document.querySelector(".pic_holder");
+    
+    
+	HoverON(img) {
+        //console.log(img);
+        this.setState({
+            image: img
+        })
+        
+       
+        var element = document.querySelector(".pic_holder");
 
 		Velocity(
 			element,
 			{ opacity: "1", right: 0 },
 			{ duration: 500, easing: "ease-in-out" }
 		);
-	}
+    }
+    
+    displayImage () {
+        console.log(this.state.image)
+        var send = this.state.image
+        return send
+    
+    }
 
 	HoverOFF() {
 		this.setState({ hover: false });
@@ -103,8 +125,7 @@ class Home extends Component {
 								<div className="row menu_holder">
 									<div className="col-4">
 										<Link className="menu_holder_first" to="/">
-											{" "}
-											anthologie{" "}
+											anthologie
 										</Link>
 									</div>
 
@@ -132,14 +153,18 @@ class Home extends Component {
 							<div className="col-12">
 								<div
 									className="link_poem"
-									onMouseEnter={this.hoverTextOn}
-									onMouseLeave={this.hoverTextOff}
+									onMouseEnter={() => this.hoverTextOn()}
+									onMouseLeave={() => this.hoverTextOff()}
 								>
-									<div onMouseEnter={this.HoverON} onMouseLeave={this.HoverOFF}>
-										<Link className="link_design" to="/king">
-											{" "}
+									<div onMouseEnter={() => this.HoverON("king")} onMouseLeave={() => this.HoverOFF()}>
+										<Link className="link_design" to="/poem/0">
 											the grey-eyed king
-										</Link>
+									    </Link>
+									</div>
+                                    <div onMouseEnter={() => this.HoverON("stix2")} onMouseLeave={() => this.HoverOFF()}>
+										<Link className="link_design" to="/poem/1">
+											the angel
+									    </Link>
 									</div>
 								</div>
 							</div>
@@ -153,14 +178,19 @@ class Home extends Component {
 					</div>
 
 					<div className="col-6 right_side" style={{ overflowX: "auto" }}>
-						<div className="pic_holder ">
+                   
+                    {console.log(this.displayImage())}
+                          
+
+                        <div className="pic_holder ">
+                        
 							{this.state.hover ? (
 								" "
 							) : (
 								<img
 									className="pic_here"
-									alt="pic"
-									src={require("./king.jpg")}
+                                    alt="pic"
+									src={ this.displayImage() }
 								/>
 							)}
 						</div>

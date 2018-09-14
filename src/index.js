@@ -26,7 +26,7 @@ ReactDOM.render((
 
             	<Bootstrap>
                 	<Route exact path="/" component={ Home } /> 
-                    <Route exact path="/king" component={Akhmatova} />
+                    <Route exact path="/poem/:id" component={Akhmatova} />
                 </Bootstrap> 
 
             </Switch>

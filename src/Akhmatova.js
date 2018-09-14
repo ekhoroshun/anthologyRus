@@ -1,9 +1,51 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Velocity from "velocity-animate";
+import poem from './json/poem.json';
+
+console.log(poem)
 
 class Akhmatova extends Component {
-    
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            poem_number: parseInt(this.props.match.params.id)
+        }
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if(this.props.match.params.id != nextProps.match.params.id) {
+            this.setState({
+                poem_number: parseInt(nextProps.match.params.id)
+            })
+        }
+    }
+
+    navivate(e, where) {
+        e.preventDefault();
+
+        if(where == 'back') {
+
+            if ( this.state.poem_number == 0 ) {
+                this.props.history.push(`/poem/${ poem.poems.length-1 }`)
+                return;
+            }
+
+            this.props.history.push(`/poem/${ this.state.poem_number - 1}`)
+
+        } else {
+
+            if ( this.state.poem_number == (poem.poems.length-1) ) {
+                this.props.history.push(`/poem/0`)
+                return;
+            }
+
+            this.props.history.push(`/poem/${ this.state.poem_number + 1}`)
+        }
+
+    }
+
 	componentDidMount() {
         var element5 = document.querySelector(".author_name");
 		Velocity(
@@ -17,7 +59,8 @@ class Akhmatova extends Component {
 			{ opacity: "1" },
 			{ duration: 2000, easing: "ease-in-out" }
 		);
-	}
+    }
+
 	componentDidUnmount() {
         var element5 = document.querySelector(".author_name");
 		Velocity(
@@ -34,6 +77,8 @@ class Akhmatova extends Component {
 	}
 
 	render() {
+
+        console.log("render called")
 		return (
 			<div className="container-fluid h-100">
 				<div className="row poem_page_loading h-100">
@@ -47,7 +92,7 @@ class Akhmatova extends Component {
 						<div className="test">
 							<div className="author_name pb-5">
 								<p className="author_p">author:</p>
-								<h2 className="author_name_design">Anna Akhmatova</h2>
+								<h2 className="author_name_design">{poem.poems[this.state.poem_number].author}</h2>
                                 <p className="author_p" > Tsarskoe Selo </p>
 							</div>
 						</div>
@@ -56,8 +101,10 @@ class Akhmatova extends Component {
 					<div class="col second_col">
                    
 						<div className="poem_text">
-							<h2 className="poem_name"> Grey Eyed King </h2>
-							<p>
+							<h2 className="poem_name"> {poem.poems[this.state.poem_number].title} </h2>
+
+                            {poem.poems[this.state.poem_number].text}
+							{/* <p>
 								{" "}
 								Glory to you, inescapable pain! The gray-eyed king died
 								yesterday.
@@ -85,14 +132,19 @@ class Akhmatova extends Component {
 							<p>
 								While outside the rustling poplars say: "Your king is no longer
 								upon this earth..."
-							</p>
+							</p> */}
 							
 						</div>
-                        <div className="date_poem"><p className="date_design">11 Dec 1910</p></div>
+                        <div className="date_poem"><p className="date_design">{poem.poems[this.state.poem_number].date}</p></div>
 					</div>
 
 					<div className="col third_col">
-						<div className="arrows"> &#x3c;  &#x3e; </div>
+						<div className="arrows">
+
+                            <a href="#" onClick={(e)=>this.navivate(e, "back")}>&#x3c;</a> 
+                            <a href="#" onClick={(e)=>this.navivate(e, "forward")}>&#x3e;</a> 
+
+                        </div>
 					</div>
 				</div>
 			</div>

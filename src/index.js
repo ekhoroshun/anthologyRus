@@ -17,7 +17,7 @@ import './sass/test.css';
 // Components
 import Bootstrap from './Bootstrap';
 import Home from './Home';
-import Akhmatova from './Akhmatova';
+import PoemPage from './PoemPage';
 
 ReactDOM.render((
     <Provider store={reducers}>
@@ -26,7 +26,7 @@ ReactDOM.render((
 
             	<Bootstrap>
                 	<Route exact path="/" component={ Home } /> 
-                    <Route exact path="/poem/:id" component={Akhmatova} />
+                    <Route exact path="/poem/:id" component={PoemPage} />
                 </Bootstrap> 
 
             </Switch>

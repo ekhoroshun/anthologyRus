@@ -5,7 +5,7 @@ import poem from './json/poem.json';
 
 console.log(poem)
 
-class Akhmatova extends Component {
+class PoemPage extends Component {
 
     constructor(props) {
         super(props);
@@ -23,14 +23,24 @@ class Akhmatova extends Component {
     }
 
     navigate(e, where) {
+        
+        var element5 = document.querySelector(".author_name");
+		Velocity(
+			element5,
+			{ opacity: "0", right: 20 },
+			{ duration: 1, easing: "ease-in-out" }
+		);
 
-        // var element8 = document.querySelector(".author_name");
+        var element8 = document.querySelector(".author_name");
 
-		// Velocity(
-		// 	element8,
-		// 	{ opacity: "1", right: 0 },
-		// 	{ duration: 1000, easing: "ease-in-out" }
-        // );
+		Velocity(
+			element8,
+			{ opacity: "1", right: 0 },
+			{ duration: 1000, easing: "ease-in-out" }
+        );
+
+        
+
         
         e.preventDefault();
 
@@ -92,8 +102,7 @@ class Akhmatova extends Component {
 					<div className="col first_col">
 						<div className="link_retour pt-5 pl-5">
 							<Link className="link_retour_design" to="/">
-								{" "}
-								Retour{" "}
+								Retour
 							</Link>
 						</div>
 						<div className="test">
@@ -111,36 +120,7 @@ class Akhmatova extends Component {
 							<h2 className="poem_name"> {poem.poems[this.state.poem_number].title} </h2>
 
                            <p>{poem.poems[this.state.poem_number].text}</p> 
-							{/* <p>
-								{" "}
-								Glory to you, inescapable pain! The gray-eyed king died
-								yesterday.
-							</p>
-							<p>
-								The autumn evening was sultry and red, My husband returned and
-								quietly said:
-							</p>
-							<p>
-								"You know, they brought him back from the hunt, They found his
-								corpse by the old oak tree.
-							</p>
-							<p>
-								I pity the queen. He was so young!.. In just one night her hair
-								turned white."
-							</p>
-							<p>
-								He found his pipe on the mantelpiece And went out to his
-								nighttime shift.
-							</p>
-							<p>
-								I'll go and wake my daughter now, I'll look into her little gray
-								eyes.
-							</p>
-							<p>
-								While outside the rustling poplars say: "Your king is no longer
-								upon this earth..."
-							</p> */}
-							
+								
 						</div>
                         <div className="date_poem"><p className="date_design">{poem.poems[this.state.poem_number].date}</p></div>
 					</div>
@@ -159,4 +139,4 @@ class Akhmatova extends Component {
 	}
 }
 
-export default Akhmatova;
+export default PoemPage;

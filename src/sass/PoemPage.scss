@@ -5,6 +5,7 @@
     font-size: 15px;
     position: relative;
     white-space: pre-wrap;
+    text-align: center;
 }
 
 .author_name{
@@ -12,12 +13,15 @@
     bottom: 0;
     opacity: 1;
     right: 20px;
+    border: 1px black solid;
+    padding: 20px;
 }
 
 .author_p{
     font-family: 'Kosugi', sans-serif;
     margin: 0;
     color: grey;
+   
 }
 .author_name_design{
     font-family: 'Playfair Display', serif;
@@ -39,13 +43,15 @@
     }
 }
 .first_col{
-//border: 1px black solid;
+border: 1px black solid;
+
 }
 .second_col{
  margin-bottom: 55px;
+
 }
 .third_col{
-    //border: 1px black solid;
+    border: 1px black solid;
 }
 
 .poem_name{

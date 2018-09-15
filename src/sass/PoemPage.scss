@@ -4,11 +4,14 @@
     margin-top: 100px;
     font-size: 15px;
     position: relative;
+    white-space: pre-wrap;
 }
 
 .author_name{
     position: absolute;
     bottom: 0;
+    opacity: 1;
+    right: 20px;
 }
 
 .author_p{
@@ -39,7 +42,7 @@
 //border: 1px black solid;
 }
 .second_col{
- //border: 1px black solid;
+ margin-bottom: 55px;
 }
 .third_col{
     //border: 1px black solid;
@@ -86,4 +89,12 @@
     text-align: center;
     letter-spacing: 10px;
     
+}
+
+.arrow_design{
+    color: black;
+    &:hover{
+        color: grey;
+        text-decoration: none;
+    }
 }

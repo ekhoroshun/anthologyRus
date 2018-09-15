@@ -22,7 +22,16 @@ class Akhmatova extends Component {
         }
     }
 
-    navivate(e, where) {
+    navigate(e, where) {
+
+        // var element8 = document.querySelector(".author_name");
+
+		// Velocity(
+		// 	element8,
+		// 	{ opacity: "1", right: 0 },
+		// 	{ duration: 1000, easing: "ease-in-out" }
+        // );
+        
         e.preventDefault();
 
         if(where == 'back') {
@@ -77,9 +86,7 @@ class Akhmatova extends Component {
 	}
 
 	render() {
-
-        console.log("render called")
-		return (
+        return (
 			<div className="container-fluid h-100">
 				<div className="row poem_page_loading h-100">
 					<div className="col first_col">
@@ -93,17 +100,17 @@ class Akhmatova extends Component {
 							<div className="author_name pb-5">
 								<p className="author_p">author:</p>
 								<h2 className="author_name_design">{poem.poems[this.state.poem_number].author}</h2>
-                                <p className="author_p" > Tsarskoe Selo </p>
+                                <p className="author_p" > {poem.poems[this.state.poem_number].place}  </p>
 							</div>
 						</div>
 					</div>
 
-					<div class="col second_col">
+					<div style={{ overflowX: "auto" }} class="col second_col">
                    
 						<div className="poem_text">
 							<h2 className="poem_name"> {poem.poems[this.state.poem_number].title} </h2>
 
-                            {poem.poems[this.state.poem_number].text}
+                           <p>{poem.poems[this.state.poem_number].text}</p> 
 							{/* <p>
 								{" "}
 								Glory to you, inescapable pain! The gray-eyed king died
@@ -141,8 +148,8 @@ class Akhmatova extends Component {
 					<div className="col third_col">
 						<div className="arrows">
 
-                            <a href="#" onClick={(e)=>this.navivate(e, "back")}>&#x3c;</a> 
-                            <a href="#" onClick={(e)=>this.navivate(e, "forward")}>&#x3e;</a> 
+                            <a className="arrow_design" href="#" onClick={(e)=>this.navigate(e, "back")}>&#x3c;</a> 
+                            <a className="arrow_design" href="#" onClick={(e)=>this.navigate(e, "forward")}>&#x3e;</a> 
 
                         </div>
 					</div>

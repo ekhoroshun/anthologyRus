@@ -3,14 +3,45 @@
         {
             "author": "Anna Akhmatova",
             "title": "Grey-eyed king",
-            "text": "Glory to you, inescapable pain! The gray-eyed king died yesterday. \n \n The autumn evening was sultry and red,\n My husband returned and quietly said:\n\n\"You know, they brought him back from the hunt,\nThey found his corpse by the old oak tree.\n\nI pity the queen. He was so young!..\nIn just one night her hair turned white.\"\n\nHe found his pipe on the mantelpiece\nAnd went out to his nighttime shift.\n\nI'll go and wake my daughter now,\nI'll look into her little gray eyes.\n\n While outside the rustling poplars say:\n\"Your king is no longer upon this earth...\"",
-            "date": "11 dec 1910"
+            "text": ["Glory to you, inescapable pain! The gray-eyed king died yesterday.\n", 
+                 "The autumn evening was sultry and red,\n",
+                 "My husband returned and quietly said:\n",
+                 "You know, they brought him back from the hunt\n",
+                 "They found his corpse by the old oak tree.\n",
+                 "I pity the queen. He was so young!..\n",
+                 "In just one night her hair turned white.\n",
+                 "He found his pipe on the mantelpiece\n",
+                 "And went out to his nighttime shift.\n",
+                 "I'll go and wake my daughter now,\n",
+                 "I'll look into her little gray eyes.\n",
+                "While outside the rustling poplars say:\n",
+                "Your king is no longer upon this earth...\n"
+            ],
+            "date": "1910",
+            "place": "Tsarskoe selo"
         },
         {
             "author": "Mikhail Lermontov",
-            "title": "The Angel",
-            "text": "The angel was flying through sky in midnight,\n And softly he sang in his flight; \nA nd clouds, and stars, and the moon in a throng\nHearkened to that holy song.\nHe sang of the garden of God's paradise,\nOf innocent ghosts in its shade;\nHe sang of the God, and his vivacious praise\nWas glories and unfeigned.\nThe juvenile soul he carried in arms\nFor worlds of distress and alarms;\nThe tune of his charming and heavenly song \nWas left in the soul for long.\nIt roamed on earth many long nights and days,\nFilled with a wonderful thirst,\nAnd earth's boring songs could not ever replace\nThe sounds of heaven it lost.\n\n"
-        }
+            "title": "I’m lonely and sad",
+            "text": "I’m lonely and sad, and in moments of bitterest pain \n Have no one to look to, alas…\nDesires!.. What use to desire without end, without gain,\nWhile all the best years swiftly, fleetingly pass!\nTo love… Whom?.. If briefly, ’tis not worth the effort…\nFore’er?..\nVain longing, since love cannot last.\nLook into your heart: joy and torment — all paltry, and there\nRemains not a trace of the past.\nThe passions?.. Sweet ailment that reason will easily cure,\nA cold word of logic arrest.\nAnd life — what is life if you look round you coolly?-\nA poor,\nAn empty and trivial jest!..",
+            "date": "1840",
+            "place": "place unknown"
+        
+        },
+         {
+             "author":"Alexander Pushkin",
+             "title": "What means my name to you?..",
+             "text":"What means my name to you?.. 'Twil die\nAs does the melancholy rumour\nOf distant waves, or, of a summer,\nThe forest's hushed nocturnal sigh.\nFound on a fading album page,\nDim will it seem and enigmatic,\nLike words traced on a tomb, a relic\nOf some long dead and vanished age.\nWhat's in my name?.. Long since forgot,\nErased by new, tempestuous passion,\nOf tenderness 'twill leave you not\nThe lingering and sweet impression.\nBut in an hour of agony,\nPray, speak it, and recall my image,\nAnd say, \"He still remembers me,\nHis heart alone still pays me homage.\"",
+             "date":"1830",
+             "place": "place unknown"
+         },
+         {
+             "author":"Sergey Esenin",
+             "title":"You don't love me, you have no pity for me",
+             "text":"You don't love me, you have no pity for me,\n Am I not a beautiful man, for maybe just a little bit?\nYou don't look at my face, yet passion thrills you,\nAnd your arms are on my shoulder.\n \nA young woman with voluptuous grin,\nWith you neither I am gentle, not I am tough.\nTell me, how many men have you caressed?\nHow many hands do you remember? How many lips?\n \nI know — they have passed you like shadows,\nNot having touched your flame,\nYou have sat upon the laps of many men,\nAnd here you are, sitting upon mine.\n \nYour eyes are half-closed, but so what?\nYou are thinking of someone else,\nAnd actually, I don't love you so much,\nDrowning in the memories of dear past.\n \nDon't call this heat a destiny,\nPremature bond is frivolous,\nAnd just as I met you accidentally,\nI will smile at our peaceful separation.\n \nYou will go your own way,\nWasting away the days of no joy,\nI'm only begging you: don't touch the men who never kissed,\nDon't tempt the men who never went through flame.\n \nAnd when you walk the streets\nWith another lover, talking of love,\nWell, maybe I will go for I walk\nAnd we will meet again.\n \nShoulders turned closer to him,\nSlightly leaning,\nYou'd say quietly: Good evening,\nAnd I'd answer: Good evening, miss.\n \nAnd then nothing would disturb your soul\nOr make it shiver —\nIf you loved, you can't fall in love again,\nIf you're burned down, you can't be ",
+             "date":"1925",
+             "place":"place unknown"
+         }
     ]
 }
 

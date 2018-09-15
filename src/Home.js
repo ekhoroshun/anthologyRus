@@ -3,72 +3,53 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Velocity from "velocity-animate";
 
-import king from "./images/king.jpg";
-
 class Home extends Component {
 	constructor(props) {
         super(props);
         
-		this.HoverOFF = this.HoverOFF.bind(this);
-		this.HoverON = this.HoverON.bind(this);
-
-		this.hoverTextOff = this.hoverTextOff.bind(this);
+        this.hoverTextOff = this.hoverTextOff.bind(this);
         this.hoverTextOn = this.hoverTextOn.bind(this);
-        
-        this.displayImage = this.displayImage.bind(this);
-
 		this.state = {
-			hover: false,
-            hover1: false,
-            image: ''
-           
+			imageToShow: ''
 		};
     }
 
-    
-    
-	HoverON(img) {
-        //console.log(img);
-        this.setState({
-            image: img
-        })
-        
-       
-        var element = document.querySelector(".pic_holder");
+    hoverTextOn(e, target) {
 
+    	this.setState({
+    		imageToShow: target
+    	});
+
+    	var element = document.querySelector(".pic_holder");
 		Velocity(
 			element,
-			{ opacity: "1", right: 0 },
+			{ opacity: 1, right: 20 },
 			{ duration: 500, easing: "ease-in-out" }
 		);
-    }
-    
-    displayImage () {
-        console.log(this.state.image)
-        var send = this.state.image
-        return send
-    
-    }
 
-	HoverOFF() {
-		this.setState({ hover: false });
-		var element = document.querySelector(".pic_holder");
+	}
+
+	hoverTextOff() {
+		
+		var self = this;;
+    	var element = document.querySelector(".pic_holder");
 		Velocity(
 			element,
-			{ opacity: "0", right: 20 },
-			{ duration: 100, easing: "ease-in-out" }
+			{ opacity: 0, right:0 },
+			{ 
+				duration: 1, 
+				easing: "ease-in-out"
+			    
+			}
 		);
+		
+
 	}
 
-	hoverTextOn() {
-		this.setState({ hover1: true });
-		var element1 = document.querySelector(".link_poem");
-		Velocity(element1, { right: 0 }, { duration: 500, easing: "ease-in-out" });
-	}
-	hoverTextOff() {
-		this.setState({ hover1: false });
-		var element1 = document.querySelector(".link_poem");
-		Velocity(element1, { right: 20 }, { duration: 100, easing: "ease-in-out" });
+	displayImage() {
+		return (
+			<img src={ "images/" + this.state.imageToShow } className="pic_here"/>
+		)
 	}
 
 	componentDidMount() {
@@ -92,28 +73,6 @@ class Home extends Component {
 			{ duration: 2000, easing: "ease-in-out" }
 		);
 	}
-	componentDidUnmount() {
-		var element2 = document.querySelector(".site_name");
-		var element3 = document.querySelector(".menu_holder");
-		var element4 = document.querySelector(".poem_holder");
-
-		Velocity(
-			element2,
-			{ opacity: "0", right: 20 },
-			{ duration: 500, easing: "ease-in-out" }
-		);
-		Velocity(
-			element3,
-			{ opacity: "0" },
-			{ duration: 1000, easing: "ease-in-out" }
-		);
-		Velocity(
-			element4,
-			{ opacity: "0" },
-			{ duration: 1000, easing: "ease-in-out" }
-		);
-	}
-	componentWillReceiveProps(nextProps) {}
 
 	render() {
 		return (
@@ -139,7 +98,7 @@ class Home extends Component {
 									<div className="col-4">
 										<div class="md-form active-pink-2 mb-3">
 											<input
-												class="form-control"
+												className="form-control"
 												type="text"
 												placeholder="Search"
 												aria-label="Search"
@@ -151,22 +110,14 @@ class Home extends Component {
 						</div>
 						<div className="row poem_holder pl-5 align-items-center">
 							<div className="col-12">
-								<div
-									className="link_poem"
-									onMouseEnter={() => this.hoverTextOn()}
-									onMouseLeave={() => this.hoverTextOff()}
-								>
-									<div onMouseEnter={() => this.HoverON("king")} onMouseLeave={() => this.HoverOFF()}>
-										<Link className="link_design" to="/poem/0">
-											the grey-eyed king
-									    </Link>
-									</div>
-                                    <div onMouseEnter={() => this.HoverON("stix2")} onMouseLeave={() => this.HoverOFF()}>
-										<Link className="link_design" to="/poem/1">
-											the angel
-									    </Link>
-									</div>
-								</div>
+
+								<ul className="link_poem list-unstyled">
+									<li className="list_poem" onMouseEnter={(e) => this.hoverTextOn(e, 'king.jpg')} onMouseLeave={() => this.hoverTextOff()}><Link className="link_design" to="/poem/0">the grey-eyed king</Link></li>
+									<li className="list_poem" onMouseEnter={(e) => this.hoverTextOn(e, 'angel.jpg')} onMouseLeave={() => this.hoverTextOff()}><Link className="link_design" to="/poem/1">i'm lonely and sad</Link></li>
+                                    <li className="list_poem" onMouseEnter={(e) => this.hoverTextOn(e, 'name.jpg')} onMouseLeave={() => this.hoverTextOff()}><Link className="link_design" to="/poem/2">what means my name to you?..</Link></li>
+									<li className="list_poem" onMouseEnter={(e) => this.hoverTextOn(e, 'pity.jpg')} onMouseLeave={() => this.hoverTextOff()}><Link className="link_design" to="/poem/3">you don't love me, you have no pity for me</Link></li>
+								</ul>
+								
 							</div>
 						</div>
 
@@ -178,21 +129,8 @@ class Home extends Component {
 					</div>
 
 					<div className="col-6 right_side" style={{ overflowX: "auto" }}>
-                   
-                    {console.log(this.displayImage())}
-                          
-
-                        <div className="pic_holder ">
-                        
-							{this.state.hover ? (
-								" "
-							) : (
-								<img
-									className="pic_here"
-                                    alt="pic"
-									src={ this.displayImage() }
-								/>
-							)}
+                   		 <div className="pic_holder">
+							{this.displayImage()}
 						</div>
 					</div>
 				</div>

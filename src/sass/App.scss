@@ -4,7 +4,7 @@
 html, body {
   	-webkit-font-smoothing: antialiased;
     height: 100%;
-    
+    //background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     
 }
 
@@ -23,7 +23,7 @@ html, body {
 }
 .menu_holder_first{
   margin-left: 20px;
-  font-size: 20px;
+  font-size: 25px;
     color: black;
     -webkit-transition: all 200ms linear;
     -moz-transition: all 200ms linear;
@@ -115,3 +115,24 @@ left: 70px;
   width: 200px;
 }
 
+.about_holder{
+  
+  margin-top: 200px;
+  //margin-left: 50px;
+  margin-right: 50px;
+
+}
+
+.about_design{
+  font-size: 40px;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+}
+
+.button_about{
+    background: none;
+    color: inherit;
+    border: none;
+   
+    
+}

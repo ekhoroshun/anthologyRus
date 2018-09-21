@@ -13,7 +13,7 @@
     bottom: 0;
     opacity: 1;
     right: 20px;
-    border: 1px black solid;
+    //border: 1px black solid;
     padding: 20px;
 }
 
@@ -31,19 +31,20 @@
 }
 .link_retour{
     font-family: 'Kosugi', sans-serif;
-    
+    margin-left: 50px;
 }
 .link_retour_design{
     color: black;
     font-weight: 600;
     letter-spacing: 3px;
-    font-size: 20px;
+    font-size: 30px;
     &:hover{
         color: grey;
+        text-decoration:line-through;
     }
 }
 .first_col{
-border: 1px black solid;
+//border: 1px black solid;
 
 }
 .second_col{
@@ -51,7 +52,7 @@ border: 1px black solid;
 
 }
 .third_col{
-    border: 1px black solid;
+    //border: 1px black solid;
 }
 
 .poem_name{
@@ -70,10 +71,11 @@ border: 1px black solid;
 
 .arrows{
     text-align: center;
-    letter-spacing: 20px;
-    padding-top: 300px;
+    letter-spacing: 40px;
+    //margin-top: 300px;
     //z-index: 1;
     font-size: 40px;
+    //border: 1px black solid;
 }
 
 .date_poem{
@@ -103,4 +105,17 @@ border: 1px black solid;
         color: grey;
         text-decoration: none;
     }
+}
+
+.counter{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 60px;
+    //border: 1px black solid;
+    text-align: center;
+    font-style: italic;
+    padding-right: 30px;
+}
+
+.third_col_style{
+    padding-top: 300px;
 }

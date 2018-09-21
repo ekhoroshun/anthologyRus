@@ -80,7 +80,7 @@ class PoemPage extends Component {
 		);
     }
 
-	componentDidUnmount() {
+	componentWillUnmount() {
         var element5 = document.querySelector(".author_name");
 		Velocity(
 			element5,
@@ -126,11 +126,17 @@ class PoemPage extends Component {
 					</div>
 
 					<div className="col third_col">
+                     <div className="row">
+                     <div className="col third_col_style">
+                        <div className="counter">
+                        0{this.state.poem_number+1} / 0{poem.poems.length}
+                        </div>
 						<div className="arrows">
 
                             <a className="arrow_design" href="#" onClick={(e)=>this.navigate(e, "back")}>&#x3c;</a> 
                             <a className="arrow_design" href="#" onClick={(e)=>this.navigate(e, "forward")}>&#x3e;</a> 
 
+                        </div></div>
                         </div>
 					</div>
 				</div>

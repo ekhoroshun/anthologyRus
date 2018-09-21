@@ -12,7 +12,7 @@ import reducers from './reducers';
 import './sass/bootstrap.scss';
 import './sass/App.scss';
 import './sass/PoemPage.scss';
-import './sass/test.css';
+
 
 // Components
 import Bootstrap from './Bootstrap';

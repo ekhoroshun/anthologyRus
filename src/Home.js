@@ -9,17 +9,21 @@ class Home extends Component {
         
         this.hoverTextOff = this.hoverTextOff.bind(this);
         this.hoverTextOn = this.hoverTextOn.bind(this);
+
 		this.state = {
-			imageToShow: ''
+            imageToShow: '',
+            showAbout: false
 		};
     }
 
     hoverTextOn(e, target) {
 
     	this.setState({
-    		imageToShow: target
+			imageToShow: target,
+			showAbout: false
+			
     	});
-
+			
     	var element = document.querySelector(".pic_holder");
 		Velocity(
 			element,
@@ -31,7 +35,7 @@ class Home extends Component {
 
 	hoverTextOff() {
 		
-		var self = this;;
+		var self = this;
     	var element = document.querySelector(".pic_holder");
 		Velocity(
 			element,
@@ -47,10 +51,13 @@ class Home extends Component {
 	}
 
 	displayImage() {
+        
 		return (
 			<img src={ "images/" + this.state.imageToShow } className="pic_here"/>
 		)
-	}
+    }
+    
+   
 
 	componentDidMount() {
 		var element2 = document.querySelector(".site_name");
@@ -78,7 +85,7 @@ class Home extends Component {
 		return (
 			<div className="container-fluid h-100">
 				<div className="row h-100">
-					<div className="col-6 left_side">
+					<div className="col-6 left_side pl-5 pt-5">
 						<div className="row top_holder">
 							<div className="col-12 pt-3 pl-5">
 								<div className="row menu_holder">
@@ -90,20 +97,12 @@ class Home extends Component {
 
 									<div className="col-4">
 										<ul className="list-unstyled">
-											<li> about </li>
-											<li> moodboard </li>
-											<li> contact </li>
-										</ul>
+											<li> <button className="button_about" onClick ={() => this.setState({  showAbout: true })}> about </button></li>
+											<li> <button className="button_about"> moodboard</button> </li>
+											</ul>
 									</div>
 									<div className="col-4">
-										<div class="md-form active-pink-2 mb-3">
-											<input
-												className="form-control"
-												type="text"
-												placeholder="Search"
-												aria-label="Search"
-											/>
-										</div>
+                                            <button className="button_about">contact</button>
 									</div>
 								</div>
 							</div>
@@ -123,15 +122,19 @@ class Home extends Component {
 
 						<div className="row name_holder pl-5 align-items-center">
 							<div className="col-12">
+                            
 								<h2 className="site_name"> Anthology of Russian Poems </h2>
 							</div>
 						</div>
 					</div>
 
 					<div className="col-6 right_side" style={{ overflowX: "auto" }}>
-                   		 <div className="pic_holder">
-							{this.displayImage()}
-						</div>
+                   		    
+								{ (this.state.showAbout) ? <div className="about_holder"><p className="about_design"> this page is dedicated to the magical and tragical world of Russian poetry</p></div> : null }
+                            
+                             <div className="pic_holder">
+                                {this.displayImage()}
+                           </div>
 					</div>
 				</div>
 			</div>
